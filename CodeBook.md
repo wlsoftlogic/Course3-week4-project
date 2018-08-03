@@ -8,10 +8,7 @@ The this project is to demonstrate your ability to collect, work with, and clean
 
 Identifiers
 
-subject:
-
-ranges from 1 to 30.
-
+subject:  ranges from 1 to 30.
 activity: string with 6 possible values
 
 1 WALKING

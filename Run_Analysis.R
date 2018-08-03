@@ -89,7 +89,7 @@ names(RequiredData)<-gsub("-mean\\()", "Mean", names(RequiredData))
 names(RequiredData)<-gsub("-std\\()", "StandardDeviation", names(RequiredData))
 names(RequiredData)<-gsub("-freq\\()", "Freq", names(RequiredData))
 names(RequiredData)<-gsub("-meanFreq\\()", "MeanFreq", names(RequiredData))
-#names(RequiredData)
+names(RequiredData)
 #
 # 5. From the data set in step 4, creates a second, independent 
 #    tidy data set with the average of each variable for each activity and each subject.
@@ -97,7 +97,7 @@ names(RequiredData)<-gsub("-meanFreq\\()", "MeanFreq", names(RequiredData))
 #
 tidydata <- aggregate(. ~ Subject + Activity, RequiredData, mean)
 tidydata <- tidydata[order(tidydata$Subject,tidydata$Activity),]
-write.table(tidydata, file = "tidydata.txt") 
+write.table(tidydata, file = "tidydata.txt", row.names = FALSE, quote=FALSE) 
 dim(tidydata)
 
 # [1] 180  88
